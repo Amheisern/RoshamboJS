@@ -28,6 +28,32 @@ function PlayerOneChoiceRock() {
 
 playerOneRock?.addEventListener('click', PlayerOneChoiceRock)
 
+function PlayerOneChoicePaper() {
+  // const randomNumber =
+  //   Math.floor(Math.random() * possibleChoicesPlayerOne.length) + 1
+  userChoiceOne = 'paper'
+  console.log(userChoiceOne)
+}
+
+playerOnePaper?.addEventListener('click', PlayerOneChoicePaper)
+
+function PlayerOneChoiceScissors() {
+  // const randomNumber =
+  //   Math.floor(Math.random() * possibleChoicesPlayerOne.length) + 1
+  userChoiceOne = 'scissors'
+  console.log(userChoiceOne)
+}
+
+playerOneScissors?.addEventListener('click', PlayerOneChoiceScissors)
+
+function playerTwoChoiceRock() {
+  userChoiceTwo = 'rock'
+  console.log(userChoiceTwo)
+  getResult()
+  console.log(getResult)
+}
+playerTwoRock?.addEventListener('click', playerTwoChoiceRock)
+
 function playerTwoChoicePaper() {
   userChoiceTwo = 'paper'
   console.log(userChoiceTwo)
@@ -35,6 +61,15 @@ function playerTwoChoicePaper() {
   console.log(getResult)
 }
 playerTwoPaper?.addEventListener('click', playerTwoChoicePaper)
+
+function playerTwoChoiceScissors() {
+  userChoiceTwo = 'scissors'
+  console.log(userChoiceTwo)
+  getResult()
+  console.log(getResult)
+}
+playerTwoScissors?.addEventListener('click', playerTwoChoiceScissors)
+
 // possibleChoicesPlayerOne.forEach((possibleChoice) =>
 //   possibleChoice.addEventListener('click', (e) => {
 //     userChoiceOne = e.target.id
@@ -70,25 +105,25 @@ playerTwoPaper?.addEventListener('click', playerTwoChoicePaper)
 
 function getResult() {
   if (userChoiceTwo === userChoiceOne) {
-    result = 'its a draw'
+    result = 'Its a DRAW'
   }
   if (userChoiceTwo === 'rock' && userChoiceOne === 'paper') {
-    result = 'you win'
+    result = 'Player 1 WINS!'
   }
   if (userChoiceTwo === 'rock' && userChoiceOne === 'scissors') {
-    result = 'you lose'
+    result = 'Player 2 WINS!'
   }
   if (userChoiceTwo === 'paper' && userChoiceOne === 'scissors') {
-    result = 'you win'
+    result = 'Player 1 WINS!'
   }
   if (userChoiceTwo === 'paper' && userChoiceOne === 'rock') {
-    result = 'you lose'
+    result = 'Player 2 WINS!'
   }
   if (userChoiceTwo === 'scissors' && userChoiceOne === 'rock') {
-    result = 'you win'
+    result = 'Player 1 WINS!'
   }
   if (userChoiceTwo === 'scissor' && userChoiceOne === 'paper') {
-    result = 'you lose'
+    result = 'Player 2 WINS!'
   }
   resultDisplay.innerHTML = result
 }
