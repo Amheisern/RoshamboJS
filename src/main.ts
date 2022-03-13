@@ -19,33 +19,22 @@ let userChoiceTwo: string
 // let computerChoice: string
 let result: string
 
-function PlayerOneChoice() {
+function PlayerOneChoiceRock() {
   // const randomNumber =
   //   Math.floor(Math.random() * possibleChoicesPlayerOne.length) + 1
-  if (playerOneRock) {
-    userChoiceOne = 'rock'
-  }
-  if (playerOnePaper) {
-    userChoiceOne = 'paper'
-  }
-  if (playerOneScissors) {
-    userChoiceOne = 'scissor'
-  }
-
-  function PlayerTwoChoice() {
-  // const randomNumber =
-  //   Math.floor(Math.random() * possibleChoicesPlayerOne.length) + 1
-  if (playerTwoRock) {
-    userChoiceTwo = 'rock'
-  }
-  if (playerTwoPaper) {
-    userChoiceTwo = 'paper'
-  }
-  if (playerTwoScissors) {
-    userChoiceTwo = 'scissor'
-  }
-  // computerChoiceDisplay.innerHTML = computerChoice
+  userChoiceOne = 'rock'
+  console.log(userChoiceOne)
 }
+
+playerOneRock?.addEventListener('click', PlayerOneChoiceRock)
+
+function playerTwoChoicePaper() {
+  userChoiceTwo = 'paper'
+  console.log(userChoiceTwo)
+  getResult()
+  console.log(getResult)
+}
+playerTwoPaper?.addEventListener('click', playerTwoChoicePaper)
 // possibleChoicesPlayerOne.forEach((possibleChoice) =>
 //   possibleChoice.addEventListener('click', (e) => {
 //     userChoiceOne = e.target.id
