@@ -43,3 +43,7 @@ fieldset {
 fieldset i {
   margin: 0 0.2rem;
 }
+button {
+  display: flex row;
+  align-items: center;
+}
