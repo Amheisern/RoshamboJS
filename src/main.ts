@@ -1,58 +1,104 @@
 import './style.css'
 
-const computerChoiceDisplay = document.getElementById('cc')!
-const userChoiceDisplay = document.getElementById('p1')!
+// const computerChoiceDisplay = document.getElementById('cc')!
+// const playerTwoChoiceDisplay = document.getElementById('p2c')!
+// const playerOneChoiceDisplay = document.getElementById('p1c')!
+// const possibleChoicesPlayerOne = document.querySelectorAll('.p1')
+// const possibleChoicesPlayerTwo = document.querySelectorAll('.p2')
+const playerOneRock = document.querySelector('.player1 i.rock')
+const playerOnePaper = document.querySelector('.player1 i.paper')
+const playerOneScissors = document.querySelector('.player1 i.scissors')
+
+const playerTwoRock = document.querySelector('.player2 i.rock')
+const playerTwoPaper = document.querySelector('.player2 i.paper')
+const playerTwoScissors = document.querySelector('.player2 i.scissors')
 const resultDisplay = document.getElementById('result')!
-const possibleChoices = document.querySelectorAll('button')
 
-let userChoice: any
-let computerChoice: any
-let result: any
+let userChoiceOne: string
+let userChoiceTwo: string
+// let computerChoice: string
+let result: string
 
-possibleChoices.forEach((possibleChoice) =>
-  possibleChoice.addEventListener('click', (e) => {
-    userChoice = e.target.id
-    userChoiceDisplay.innerHTML = userChoice
-    generateComputerChoice()
-    getResult()
-  })
-)
-
-function generateComputerChoice() {
-  const randomNumber = Math.floor(Math.random() * possibleChoices.length) + 1
-
-  if (randomNumber === 1) {
-    computerChoice = 'rock'
+function PlayerOneChoice() {
+  // const randomNumber =
+  //   Math.floor(Math.random() * possibleChoicesPlayerOne.length) + 1
+  if (playerOneRock) {
+    userChoiceOne = 'rock'
   }
-  if (randomNumber === 2) {
-    computerChoice = 'scissors'
+  if (playerOnePaper) {
+    userChoiceOne = 'paper'
   }
-  if (randomNumber === 3) {
-    computerChoice = 'paper'
+  if (playerOneScissors) {
+    userChoiceOne = 'scissor'
   }
-  computerChoiceDisplay.innerHTML = computerChoice
+
+  function PlayerTwoChoice() {
+  // const randomNumber =
+  //   Math.floor(Math.random() * possibleChoicesPlayerOne.length) + 1
+  if (playerTwoRock) {
+    userChoiceTwo = 'rock'
+  }
+  if (playerTwoPaper) {
+    userChoiceTwo = 'paper'
+  }
+  if (playerTwoScissors) {
+    userChoiceTwo = 'scissor'
+  }
+  // computerChoiceDisplay.innerHTML = computerChoice
 }
+// possibleChoicesPlayerOne.forEach((possibleChoice) =>
+//   possibleChoice.addEventListener('click', (e) => {
+//     userChoiceOne = e.target.id
+//     playerOneChoiceDisplay.innerHTML = userChoiceOne
+//     // generateComputerChoice()
+//     getResult()
+//   })
+// )
+
+// possibleChoicesPlayerTwo.forEach((possibleChoices) =>
+//   possibleChoices.addEventListener('click', (e) => {
+//     userChoiceOne = e.target.id
+//     playerTwoChoiceDisplay.innerHTML = userChoiceTwo
+//     // generateComputerChoice()
+//     getResult()
+//   })
+// )
+// function generateComputerChoice() {
+//   const randomNumber =
+//     Math.floor(Math.random() * possibleChoicesPlayerOne.length) + 1
+
+//   if (randomNumber === 1) {
+//     computerChoice = 'rock'
+//   }
+//   if (randomNumber === 2) {
+//     computerChoice = 'scissors'
+//   }
+//   if (randomNumber === 3) {
+//     computerChoice = 'paper'
+//   }
+//   computerChoiceDisplay.innerHTML = computerChoice
+// }
 
 function getResult() {
-  if (computerChoice === userChoice) {
+  if (userChoiceTwo === userChoiceOne) {
     result = 'its a draw'
   }
-  if (computerChoice === 'rock' && userChoice === 'paper') {
+  if (userChoiceTwo === 'rock' && userChoiceOne === 'paper') {
     result = 'you win'
   }
-  if (computerChoice === 'rock' && userChoice === 'scissors') {
+  if (userChoiceTwo === 'rock' && userChoiceOne === 'scissors') {
     result = 'you lose'
   }
-  if (computerChoice === 'paper' && userChoice === 'scissors') {
+  if (userChoiceTwo === 'paper' && userChoiceOne === 'scissors') {
     result = 'you win'
   }
-  if (computerChoice === 'paper' && userChoice === 'rock') {
+  if (userChoiceTwo === 'paper' && userChoiceOne === 'rock') {
     result = 'you lose'
   }
-  if (computerChoice === 'scissors' && userChoice === 'rock') {
+  if (userChoiceTwo === 'scissors' && userChoiceOne === 'rock') {
     result = 'you win'
   }
-  if (computerChoice === 'scissor' && userChoice === 'paper') {
+  if (userChoiceTwo === 'scissor' && userChoiceOne === 'paper') {
     result = 'you lose'
   }
   resultDisplay.innerHTML = result
@@ -96,9 +142,9 @@ function getResult() {
 //   else return 'Player 2 won!'
 // }
 
-// console.log(playerOneRock)
-// console.log(playerOnePaper)
-// console.log(playerOneScissors)
-// console.log(playerTwoRock)
-// console.log(playerTwoPaper)
-// console.log(playerTwoScissors)
+console.log(playerOneRock)
+console.log(playerOnePaper)
+console.log(playerOneScissors)
+console.log(playerTwoRock)
+console.log(playerTwoPaper)
+console.log(playerTwoScissors)
