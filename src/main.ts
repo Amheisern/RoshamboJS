@@ -9,6 +9,16 @@ const playerTwoRock = document.querySelector('.player2 i.rock')
 const playerTwoPaper = document.querySelector('.player2 i.paper')
 const playerTwoScissors = document.querySelector('.player2 i.scissors')
 
+function handleClickOnPlayerOneRock() {
+  console.log('Rock')
+}
+playerOneRock?.addEventListener('click', handleClickOnPlayerOneRock)
+
+function handleClickOnPlayerTwoPaper() {
+  console.log('Paper')
+}
+playerTwoPaper?.addEventListener('click', handleClickOnPlayerTwoPaper)
+
 console.log(playerOneRock)
 console.log(playerOnePaper)
 console.log(playerOneScissors)
