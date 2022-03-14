@@ -1,8 +1,8 @@
 import './style.css'
 
-var confettiElement = document.getElementById('my-canvas')
-var confettiSettings = { target: confettiElement }
-var confetti = new ConfettiGenerator(confettiSettings)
+// var confettiElement = document.getElementById('my-canvas')
+// var confettiSettings = { target: confettiElement }
+// var confetti = new ConfettiGenerator(confettiSettings)
 
 // const computerChoiceDisplay = document.getElementById('cc')!
 // const playerTwoChoiceDisplay = document.getElementById('p2c')!
