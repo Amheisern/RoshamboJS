@@ -130,7 +130,7 @@ function getResult() {
     result = 'Player 2 WINS!'
   }
   resultDisplay.innerHTML = result
-  confetti.render()
+  // confetti.render()
 }
 // console.clear()
 
