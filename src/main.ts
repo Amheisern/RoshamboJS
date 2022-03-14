@@ -1,5 +1,9 @@
 import './style.css'
 
+var confettiElement = document.getElementById('my-canvas')
+var confettiSettings = { target: confettiElement }
+var confetti = new ConfettiGenerator(confettiSettings)
+
 // const computerChoiceDisplay = document.getElementById('cc')!
 // const playerTwoChoiceDisplay = document.getElementById('p2c')!
 // const playerOneChoiceDisplay = document.getElementById('p1c')!
@@ -126,6 +130,7 @@ function getResult() {
     result = 'Player 2 WINS!'
   }
   resultDisplay.innerHTML = result
+  confetti.render()
 }
 // console.clear()
 
